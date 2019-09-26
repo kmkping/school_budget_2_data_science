@@ -39,7 +39,6 @@ train = 'trainPredictors.csv'  # path to training file
 label = 'trainLabels.csv'  # path to label file of training data
 test = 'TestData2.csv'  # path to testing file
 
-# Specify which original features to keep and discard in the model
 # Intercept = 0
 # Object_Description = 1
 # Text_2 = 2
@@ -142,7 +141,7 @@ def data(path, label_path=None):
         # c is an index for the kept original features (15 of them)
         # TODO: drop c and use m for hashing, c was kept for reproducibility
         # m is the index for all the original features (17 of them)
-        # feat is the original raw text or value for feature
+  
         c =0 
         for m, feat in enumerate(line.rstrip().split(',')):
             # Drop unwanted original features
